@@ -1,0 +1,94 @@
+@import './variables.scss';
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $font-family-primary;
+    font-size: 100%;
+}
+
+h1 {
+    padding: 1.5rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: $color-text-dark;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    padding: 0 1.5rem;
+    
+    &--center {
+        text-align: center;
+    }
+}
+
+.site-header {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0 1.5rem;
+    // box-shadow: 0px 1px 3px #eee; 
+
+    &__brand {
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+            transform: rotate(2deg);
+        }
+    }
+}
+
+.site-nav > ul {
+    display: flex;
+    letter-spacing: 1px;
+}
+
+.site-nav__item {
+    padding-left: 1rem;
+
+    &:hover > a {
+        color: $color-primary;
+    }
+}
+
+.home {
+    overflow: hidden;
+}
+
+.gallery {
+    padding: 0 1.5rem 3rem 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    margin: -7.5px;
+    overflow: hidden;
+
+    &__item {
+        overflow: hidden;
+        flex: 0 0 calc(25% - 15px);
+        margin: 7.5px;
+        height: 300px;
+    }
+}
+
+.random {
+    max-width: 500px;
+    margin: 0 auto;
+}
